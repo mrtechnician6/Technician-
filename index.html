@@ -9,11 +9,13 @@
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         html { scroll-behavior: smooth; }
         body { background-color: #0a0a0a; color: #ffffff; font-family: 'Inter', sans-serif; }
         .glow { text-shadow: 0 0 15px rgba(59, 130, 246, 0.6); }
         .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        .project-card:hover { border-color: #3b82f6; transform: translateY(-5px); transition: all 0.3s ease; }
     </style>
 </head>
 <body class="antialiased">
@@ -55,40 +57,52 @@
     </section>
 
     <section id="work" class="py-20 px-6 max-w-6xl mx-auto">
-        <h3 class="text-3xl font-bold mb-12 flex items-center"><span class="w-10 h-1 bg-blue-500 mr-4"></span>Featured Work</h3>
+        <h3 class="text-3xl font-bold mb-12 flex items-center"><span class="w-10 h-1 bg-blue-500 mr-4"></span>Live Portfolio Demos</h3>
         
-        <div class="grid md:grid-cols-2 gap-12 items-center bg-zinc-900/50 p-8 rounded-3xl border border-zinc-800 mb-12">
-            <div>
-                <span class="text-blue-400 text-sm font-bold uppercase">Web Development</span>
-                <h4 class="text-4xl font-bold mt-2 mb-4">Lovely Couple- Dating Platform</h4>
-                <p class="text-gray-400 mb-6 leading-relaxed">
-                    A premium digital experience built for connection. This platform features a mobile-first UI, secure architecture, and a clean aesthetic designed to build user trust.
-                </p>
-                <a href="https://mrtechnician6.github.io/Chiyaa-Bagaan/" target="_blank" class="inline-block text-blue-500 font-bold border-b-2 border-blue-500 pb-1 hover:text-blue-400 transition">
-                    See Live Demo →
-                </a>
-            </div>
-            <div class="relative group">
-                <img src="331shots_so.png" alt="Couple Project Screenshot" class="rounded-2xl shadow-2xl transition group-hover:scale-105 duration-500 border border-zinc-800">
-            </div>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-zinc-900/50 p-6 rounded-3xl border border-zinc-800 hover:border-blue-500 transition group">
-                <h4 class="text-2xl font-bold mb-3">Himalayan Java Coffee</h4>
-                <p class="text-gray-400 mb-6">A premium coffee shop experience featuring online ordering and digital menu integration.</p>
-                <a href="https://mrtechnician6.github.io/Himalayan-java-coffee-/" target="_blank" class="text-blue-500 font-bold hover:underline">
-                    View Coffee Shop Demo →
+        <div class="grid md:grid-cols-3 gap-8">
+            
+            <div class="bg-zinc-900/50 p-6 rounded-3xl border border-zinc-800 project-card flex flex-col h-full">
+                <div class="h-48 overflow-hidden rounded-2xl mb-6 border border-zinc-800 bg-zinc-800">
+                    <img src="331shots_so.png" alt="Couple Project" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="flex-grow">
+                    <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">Web Development</span>
+                    <h4 class="text-xl font-bold mt-2 mb-3">Lovely Couple</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A digital dating platform built for connection. Features a mobile-first UI and clean aesthetic.</p>
+                </div>
+                <a href="https://mrtechnician6.github.io/Chiyaa-Bagaan/" target="_blank" class="text-blue-500 font-bold hover:text-blue-400 inline-flex items-center">
+                    See Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                 </a>
             </div>
 
-            <div class="bg-zinc-900/50 p-6 rounded-3xl border border-zinc-800 hover:border-blue-500 transition group">
-                <h4 class="text-2xl font-bold mb-3">Bajeko Sekuwa</h4>
-                <p class="text-gray-400 mb-6">Restaurant management interface and digital presence for a legendary brand.</p>
-                <a href="https://mrtechnician6.github.io/Bajeko-Sekuwa/" target="_blank" class="text-blue-500 font-bold hover:underline">
-                    View Restaurant Demo →
+            <div class="bg-zinc-900/50 p-6 rounded-3xl border border-zinc-800 project-card flex flex-col h-full">
+                <div class="h-48 rounded-2xl mb-6 border border-zinc-800 bg-zinc-800 flex items-center justify-center">
+                    <i class="fas fa-coffee text-5xl text-zinc-600"></i>
+                </div>
+                <div class="flex-grow">
+                    <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">Order Automation</span>
+                    <h4 class="text-xl font-bold mt-2 mb-3">Himalayan Java</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">Integrated order system with WhatsApp connectivity and automated discount emails.</p>
+                </div>
+                <a href="https://mrtechnician6.github.io/Himalayan-java-coffee-/" target="_blank" class="text-blue-500 font-bold hover:text-blue-400 inline-flex items-center">
+                    See Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
                 </a>
             </div>
+
+            <div class="bg-zinc-900/50 p-6 rounded-3xl border border-zinc-800 project-card flex flex-col h-full">
+                <div class="h-48 rounded-2xl mb-6 border border-zinc-800 bg-zinc-800 flex items-center justify-center">
+                    <i class="fas fa-fire-alt text-5xl text-zinc-600"></i>
+                </div>
+                <div class="flex-grow">
+                    <span class="text-blue-400 text-xs font-bold uppercase tracking-widest">Landing Page</span>
+                    <h4 class="text-xl font-bold mt-2 mb-3">Bajeko Sekuwa</h4>
+                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">A performance-driven landing page for a heritage restaurant brand in Nepal.</p>
+                </div>
+                <a href="https://mrtechnician6.github.io/Bajeko-Sekuwa/" target="_blank" class="text-blue-500 font-bold hover:text-blue-400 inline-flex items-center">
+                    See Live Demo <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                </a>
+            </div>
+
         </div>
     </section>
 
@@ -130,5 +144,4 @@
     </footer>
 
 </body>
-            </html>
-            
+</html>
